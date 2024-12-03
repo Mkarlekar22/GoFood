@@ -30,6 +30,8 @@ export default function Login() {
         alert("Enter valid credentials");
       } else {
         alert("Login successful!");
+        localStorage.setItem("userEmail", credentials.email); // Store token
+
         localStorage.setItem("authToken", json.authToken); // Store token
         console.log(localStorage.getItem("authToken"));
         navigate("/"); // Redirect to home page
